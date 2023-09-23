@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "strict": true,
+        "outDir": "./frontend/build/",
+        "rootDir": "./typescript/",
+        "removeComments": true
+    }
+}
