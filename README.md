@@ -66,7 +66,3 @@ L'applicazione è composta da diversi componenti da avviare:<br>
     ./sass.sh
     ```
     <sub>Potrebbe essere necessario eseguire `chmod u+x sass.sh` prima di poter eseguire il comando.</sub>
-
-## Crediti
-- [@xFranciB](https://github.com/xFranciB)
-- [@andreabass05](https://github.com/andreabass05)
