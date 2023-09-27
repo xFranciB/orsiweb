@@ -1,7 +1,5 @@
-<center>
-<h1>Oratori Scanzorosciate Insieme</h1>
-<p>Sito ufficiale degli Oratori Scanzorosciate Insieme (or.s.i.)</p>
-</center>
+# Oratori Scanzorosciate Insieme (orsiweb)
+Sito ufficiale degli Oratori Scanzorosciate Insieme (or.s.i.)
 
 ## Informazioni
 Applicazione web che permette di visualizzare informazioni sugli oratori di Scanzorosciate, tra cui orari, contatti e avvisi pubblicati dallo staff. Offre anche un servizio per visualizzare e iscriversi a eventi promossi dagli oratori tra cui il Cregrest e il catechismo.
@@ -40,7 +38,7 @@ composer update
 
 ### Configurazione variabili d'ambiente
 La repository del progetto include un file `.env.example`, che contiene la struttura del file `.env` che l'applicazione usa. Questa è una lista delle variabili e il loro utilizzo:<br>
-// TODO
+<!-- TODO -->
 
 ### Avvio applicazione
 L'applicazione è composta da diversi componenti da avviare:<br>
