@@ -14,6 +14,7 @@ Rimani aggiornato sugli Oratori di Scanzorosciate (or.s.i.), ora anche online. V
   - [Obiettivi](#obiettivi)
 - [Requisiti non funzionali](#requisiti-non-funzionali)
   - [Obiettivi](#obiettivi-1)
+- [Requisiti di dominio](#requisiti-di-dominio)
 
 ## Introduzione
 ### Scopo
@@ -43,9 +44,7 @@ L'applicazione si porrà i seguenti obiettivi:
         7. **Personalizzazione**: L'applicazione offrirà allo staff alcuni stili predefiniti di avvisi da poter pubblicare, per comunicare informazioni differenti (es. avviso generico o aggiornamento al sito).
 
     2. **Orari**: La sezione orari del sito conterrà informazioni riguardante agli orari di apertura/chiusura degli Oratori, oppure di altri servizi offerti da essi, tra cui messe. Lo staff sarà in grado di apportare modifiche.
-
     3. **Moduli**: Lo staff avrà la possibilità di caricare documenti DOC, DOCX e PDF per gli utenti da visualizzare e da scaricare.
-
     4. **"I nostri oratori"**: Gli utenti potranno facilmente vedere informazioni sui vari oratori di Scanzorosciate, tra cui contatti e indirizzi.
 
 2. **Prenotazione merchandise**: Gli utenti potranno facilmente prenotare *merchandise* venduto dagli or.s.i., il sito **non** si preoccuperà della vendita e della gestione del pagamento, ma servirà soltanto come storico delle vendite per facilitare il lavoro dello staff.
@@ -72,19 +71,15 @@ L'applicazione si porrà i seguenti obiettivi:
 5. **Manuale utente**: L'applicazione avrà una sezione dedicata alla documentazione, che potrà essere sfogliata dagli utenti se confusi. Gli amministratori avranno accesso a più pagine che parleranno di questioni relative alla gestione del sito.
 
 ## Requisiti non funzionali
-L'applicazione sarà sviluppata per funzionare su un ambiente GNU/Linux con un server Apache dotato di preprocessore PHP e di database MySQL o MariaDB.
-
 ### Obiettivi
 L'applicazione si porrà come obiettivo fondamentale la facilità di utilizzo degli utenti. Dovra anche implementare le seguenti caratteristiche:
 
 1. **Facilità d'accesso**: L'applicazione sarà sviluppata per tutti i browser più diffusi, con particolare attenzione per i più utilizzati, tra cui Google Chrome, Mozilla Firefox e le loro varianti per cellulari.
-
 2. **Motore Markdown**: L'applicazione sarà dotata di un motore Markdown e di sanificazione dell'HTML, che sarà disponibile negli avvisi e nella descrizione degli eventi creati dallo staff.
-
 3. **Visualizzatore immagini/video/documenti**: L'applicazione sarà fornita di un visualizzatore di immagini, video e documenti DOC, DOCX e PDF.
-
 4. **Sicurezza**: L'applicazione utilizzerà token per l'autenticazione degli utenti. Consentirà anche l'utilizzo dell'autenticazione a due fattori (2FA).
-
 5. **Search Engine Optimization (SEO)**: L'applicazione s'integrerà con i motori di ricerca più utilizzati per rendere il sito più visibile e più rilevante nei risultati.
-
 6. **Documentazione tecnica**: L'applicazione sarà dotata di un'esaustiva documentazione tecnica e del codice per rendere facile la manutenzione da parte di eventuali manutentori futuri.
+
+## Requisiti di dominio
+L'applicazione sarà sviluppata per funzionare su un ambiente GNU/Linux con un server Apache dotato di preprocessore PHP e di database MySQL o MariaDB.
