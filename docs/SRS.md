@@ -40,10 +40,10 @@ L'applicazione si porrà i seguenti obiettivi:
         3. **Allegati**: Sarà possibile caricare allegati, i tipi supportati saranno: immagini, video, documenti DOC e DOCX e file PDF.
         4. **Ricerca**: Gli utenti saranno in grado di cercare facilmente tra gli avvisi, usando una barra di ricerca oppure dei *tag* preimpostati dallo staff.
         5. **Supporto per Markdown**: Lo staff potrà creare avvisi utilizzando markdown.
-        6. **Avvisi fissati**: Lo staff potrà fissare un avviso per una determinata quantità di tempo (anche illimitato)
+        6. **Avvisi fissati**: Lo staff potrà fissare un avviso per una determinata quantità di tempo (anche illimitato).
         7. **Personalizzazione**: L'applicazione offrirà allo staff alcuni stili predefiniti di avvisi da poter pubblicare, per comunicare informazioni differenti (es. avviso generico o aggiornamento al sito).
 
-    2. **Orari**: La sezione orari del sito conterrà informazioni riguardante agli orari di apertura/chiusura degli Oratori, oppure di altri servizi offerti da essi, tra cui messe. Lo staff sarà in grado di apportare modifiche.
+    2. **Orari**: La sezione orari dell'applicazione conterrà informazioni riguardanti gli orari di apertura/chiusura degli oratori, oppure di altri servizi offerti da essi, tra cui messe. Lo staff sarà in grado di apportare modifiche direttamente dal sito.
     3. **Moduli**: Lo staff avrà la possibilità di caricare documenti DOC, DOCX e PDF per gli utenti da visualizzare e da scaricare.
     4. **"I nostri oratori"**: Gli utenti potranno facilmente vedere informazioni sui vari oratori di Scanzorosciate, tra cui contatti e indirizzi.
 
@@ -51,9 +51,9 @@ L'applicazione si porrà i seguenti obiettivi:
 
 3. **Eventi**: L'applicazione consentirà agli utenti di visualizzare e di iscriversi a eventi promossi dagli or.s.i., come il Cregrest e il catechismo. Per iscriversi sarà necessario far parte di una **famiglia**:
 
-   1. **Famiglia**: Un utente normale del sito potrà iscriversi agli eventi dopo aver fornito altre informazioni relative a sé stesso (come codice fiscale e altre a scelta dello staff) per poter creare una famiglia. Una famiglia sarà composta da due tipi di entità:
+   1. **Famiglia**: Un utente normale del sito potrà iscriversi agli eventi dopo aver fornito altre informazioni relative a sé stesso (come codice fiscale e altre a scelta dello staff) per poter creare una famiglia. Una famiglia è composta da due tipi di entità:
 
-      1. **Genitori/Tutori legali**: Che potrà iscriversi a eventi e gestire le iscrizioni propri ragazzi minorenni.
+      1. **Genitore/Tutore legale**: Che potrà iscriversi a eventi e gestire le iscrizioni dei propri ragazzi minorenni.
       2. **Adulto**: Che potrà iscriversi normalmente a qualsiasi evento
 
    2. **Gestione per amministratori**: Gli amministratori potranno facilmente visualizzare informazioni relative agli eventi creati, e avranno anche la possibilità di:
@@ -68,7 +68,7 @@ L'applicazione si porrà i seguenti obiettivi:
     3. **Gestore dei ruoli**: Gli account con il ruolo di amministratore potranno assegnare ruoli agli altri utenti, permettendo o limitando certe azioni sull'applicazione.
     4. **Invio email**: Lo staff potrà mandare email personalizzate a un determinato gruppo di utenti.
 
-5. **Manuale utente**: L'applicazione avrà una sezione dedicata alla documentazione, che potrà essere sfogliata dagli utenti se confusi. Gli amministratori avranno accesso a più pagine che parleranno di questioni relative alla gestione del sito.
+5. **Manuale utente**: L'applicazione avrà una sezione dedicata alla documentazione che potrà essere sfogliata dagli utenti se necessario. Gli amministratori avranno accesso a più pagine che parleranno di questioni relative alla gestione del sito.
 
 ## Requisiti non funzionali
 ### Obiettivi
@@ -79,7 +79,7 @@ L'applicazione si porrà come obiettivo fondamentale la facilità di utilizzo de
 3. **Visualizzatore immagini/video/documenti**: L'applicazione sarà fornita di un visualizzatore di immagini, video e documenti DOC, DOCX e PDF.
 4. **Sicurezza**: L'applicazione utilizzerà token per l'autenticazione degli utenti. Consentirà anche l'utilizzo dell'autenticazione a due fattori (2FA).
 5. **Search Engine Optimization (SEO)**: L'applicazione s'integrerà con i motori di ricerca più utilizzati per rendere il sito più visibile e più rilevante nei risultati.
-6. **Documentazione tecnica**: L'applicazione sarà dotata di un'esaustiva documentazione tecnica e del codice per rendere facile la manutenzione da parte di eventuali manutentori futuri.
+6. **Documentazione tecnica**: L'applicazione sarà dotata di un'esaustiva documentazione tecnica per rendere facile la manutenzione da parte di eventuali manutentori futuri.
 
 ## Requisiti di dominio
 L'applicazione sarà sviluppata per funzionare su un ambiente GNU/Linux con un server Apache dotato di preprocessore PHP e di database MySQL o MariaDB.
