@@ -34,8 +34,9 @@ L'applicazione richiede che le seguenti estensioni di PHP siano abilitate:<br>
 
 Per verificare quelle installate e installate si possono eseguire questi comandi:
 ```bash
-ls /usr/lib/php/modules | grep mysqli # Per verificare se `mysqli` è scaricata (non necessariamente abilitata). /usr/lib/php/modules è la cartella di installazione di default
-php -m # Per verificare quelle abilitate
+ls /usr/lib/php/modules | grep mysqli # Per verificare se `mysqli` è scaricata (non necessariamente abilitata).
+                                      # /usr/lib/php/modules è la cartella di installazione di default
+php -m | grep mysqli # Per verificare se `mysqli` è abilitata
 ```
 
 In caso non fossero abilitate:<br>
