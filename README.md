@@ -14,6 +14,7 @@ Applicazione web che permette di visualizzare informazioni sugli oratori di Scan
     - [Configurazione variabili d'ambiente](#configurazione-variabili-dambiente)
         - [Connessione al database](#connessione-al-database)
     - [Avvio applicazione](#avvio-applicazione)
+- [Altre risorse](#altre-risorse)
 
 ## Tecnologie utilizzate
 - PHP 8
@@ -92,3 +93,6 @@ L'applicazione è composta da diversi componenti da avviare:<br>
     ./sass.sh
     ```
     <sub>Potrebbe essere necessario eseguire `chmod u+x sass.sh` prima di poter eseguire il comando.</sub>
+
+## Altre risorse
+- [Specifica dei Requisiti Software](docs/SRS.md)
