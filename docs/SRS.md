@@ -75,11 +75,9 @@ L'applicazione si porrà i seguenti obiettivi:
 L'applicazione si porrà come obiettivo fondamentale la facilità di utilizzo degli utenti. Dovra anche implementare le seguenti caratteristiche:
 
 1. **Facilità d'accesso**: L'applicazione sarà sviluppata per tutti i browser più diffusi, con particolare attenzione per i più utilizzati, tra cui Google Chrome, Mozilla Firefox e le loro varianti per cellulari.
-2. **Motore Markdown**: L'applicazione sarà dotata di un motore Markdown e di sanificazione dell'HTML, che sarà disponibile negli avvisi e nella descrizione degli eventi creati dallo staff.
-3. **Visualizzatore immagini/video/documenti**: L'applicazione sarà fornita di un visualizzatore di immagini, video e documenti DOC, DOCX e PDF.
-4. **Sicurezza**: L'applicazione utilizzerà token per l'autenticazione degli utenti. Consentirà anche l'utilizzo dell'autenticazione a due fattori (2FA).
-5. **Search Engine Optimization (SEO)**: L'applicazione s'integrerà con i motori di ricerca più utilizzati per rendere il sito più visibile e più rilevante nei risultati.
-6. **Documentazione tecnica**: L'applicazione sarà dotata di un'esaustiva documentazione tecnica per rendere facile la manutenzione da parte di eventuali manutentori futuri.
+2. **Sicurezza**: L'applicazione utilizzerà token per l'autenticazione degli utenti. Consentirà anche l'utilizzo dell'autenticazione a due fattori (2FA).
+3. **Search Engine Optimization (SEO)**: L'applicazione s'integrerà con i motori di ricerca più utilizzati per rendere il sito più visibile e più rilevante nei risultati.
+4. **Documentazione tecnica**: L'applicazione sarà dotata di un'esaustiva documentazione tecnica per rendere facile la manutenzione da parte di eventuali manutentori futuri.
 
 ## Requisiti di dominio
 L'applicazione sarà sviluppata per funzionare su un ambiente GNU/Linux con un server Apache dotato di preprocessore PHP e di database MySQL o MariaDB.
