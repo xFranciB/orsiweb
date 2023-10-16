@@ -1,3 +1,3 @@
 const greet = () => {
-    return "Hello, World!"
+  return "Hello, World!"
 }

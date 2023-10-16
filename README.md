@@ -12,7 +12,6 @@ Applicazione web che permette di visualizzare informazioni sugli oratori di Scan
         - [Estensioni](#estensioni)
         - [Dipendenze](#dipendenze)
     - [Configurazione variabili d'ambiente](#configurazione-variabili-dambiente)
-        - [Connessione al database](#connessione-al-database)
     - [Avvio applicazione](#avvio-applicazione)
 - [Altre risorse](#altre-risorse)
 
@@ -64,10 +63,14 @@ composer update
 ### Configurazione variabili d'ambiente
 La repository del progetto include un file `.env.example`, che contiene la struttura del file `.env` che l'applicazione usa. Questa è una lista delle variabili e il loro utilizzo:<br>
 #### Connessione al database
-* `DB_HOSTNAME`: Indirizzo del server del database
-* `DB_USERNAME`: Username dell'account con cui effettuare l'accesso al database
-* `DB_PASSWORD`: Password dell'account con cui effettuare l'accesso al database
-* `DB_DATABASE`: Nome del database da utilizzare
+- `DB_HOSTNAME`: Indirizzo del server del database
+- `DB_USERNAME`: Username dell'account con cui effettuare l'accesso al database
+- `DB_PASSWORD`: Password dell'account con cui effettuare l'accesso al database
+- `DB_DATABASE`: Nome del database da utilizzare
+
+#### Password
+- `PASS_HMAC`: "Pepper" da usare durante l'hashing delle password 
+    - ATTENZIONE: Senza il "PASS\_HMAC" usato per generare le password, queste sono IRRECUPERABILI.
 
 ### Avvio applicazione
 L'applicazione è composta da diversi componenti da avviare:<br>
