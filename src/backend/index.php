@@ -4,8 +4,8 @@ require_once 'lib/routes/users.php';
 
 // TODO: Stupid workaround
 $payload = [
-  'get' => $_GET,
-  'post' => json_decode(file_get_contents('php://input'), true)
+  'get' => $_GET?? [],
+  'post' => json_decode(file_get_contents('php://input'), true)?? []
 ];
 
 switch ($_SERVER['REQUEST_URI']) {

@@ -19,11 +19,13 @@ class Users {
     }
   }
 
-  public static function create(array $payload): bool {
+  public static function create(array $payload): void {
+    $conn = \Database\connect();
+
     $res = Sanitize\check($payload['post'], [
       'name' => [Sanitize\SPEC::Required, Sanitize\Spec::String],
       'surname' => [Sanitize\Spec::Required, Sanitize\Spec::String],
-      'email' => [Sanitize\Spec::Required, Sanitize\Spec::Email],
+      'email' => [Sanitize\Spec::Required, Sanitize\Spec::Email, Sanitize\Spec::UniqueStr($conn, 'users', 'email')],
       'password' => [Sanitize\Spec::Required, Sanitize\Spec::String]
     ]);
 
@@ -31,10 +33,8 @@ class Users {
       // TODO: standardize errors and do this better
       die(json_encode($res->error));
     }
-
-    $conn = \Database\connect();
     
-    return \Models\Users::create($conn,
+    \Models\User::create($conn,
       $payload['post']['name'],
       $payload['post']['surname'],
       $payload['post']['email'],
