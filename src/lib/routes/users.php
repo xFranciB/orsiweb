@@ -1,24 +1,44 @@
 <?php
 namespace Routes;
+use \Utils\Sanitize;
 
 require_once 'lib/sanitizer.php';
 require_once 'lib/database.php';
 require_once 'lib/models/users.php';
 
 class Users {
-  public static function create($name, $surname, $email, $password): bool {
-    $name = \Utils\Sanitize\string($name);
-    $surname = \Utils\Sanitize\string($surname);
-    $email = \Utils\Sanitize\email($email);
-    $password = \Utils\Sanitize\string($password);
+  public static function handle(string $method, array $payload): mixed {
+    switch ($method) {
+      case 'POST': {
+        return self::create($payload);
+      }
 
-    if (is_null($name) || is_null($surname) || is_null($email) || is_null($password)) {
+      default: {
+        die();
+      }
+    }
+  }
+
+  public static function create(array $payload): bool {
+    $res = Sanitize\check($payload['post'], [
+      'name' => [Sanitize\SPEC::Required, Sanitize\Spec::String],
+      'surname' => [Sanitize\Spec::Required, Sanitize\Spec::String],
+      'email' => [Sanitize\Spec::Required, Sanitize\Spec::Email],
+      'password' => [Sanitize\Spec::Required, Sanitize\Spec::String]
+    ]);
+
+    if (!$res->status) {
       // TODO: standardize errors and do this better
-      return false;
+      die(json_encode($res->error));
     }
 
     $conn = \Database\connect();
     
-    return \Models\Users::create($conn, $name, $surname, $email, $password);
+    return \Models\Users::create($conn,
+      $payload['post']['name'],
+      $payload['post']['surname'],
+      $payload['post']['email'],
+      $payload['post']['password']
+    );
   }
 }
