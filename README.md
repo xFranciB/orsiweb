@@ -72,6 +72,9 @@ La repository del progetto include un file `.env.example`, che contiene la strut
 - `PASS_HMAC`: "Pepper" da usare durante l'hashing delle password 
     - ATTENZIONE: Senza il "PASS\_HMAC" usato per generare le password, queste sono IRRECUPERABILI.
 
+#### Altro
+- `DEBUG`: Abilita la modalità debug dell'applicazione, che restituisce errori più esaustivi.
+
 ### Avvio applicazione
 L'applicazione è composta da diversi componenti da avviare:<br>
 <sub>Le porte 3000 e 8000 sono arbitrarie, e usate rispettivamente per il frontend e il backend durante lo sviluppo dell'applicazione.</sub>

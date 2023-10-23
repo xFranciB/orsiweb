@@ -30,6 +30,8 @@ abstract class SPEC {
     global $spec_function;
 
     $spec_function["uniquestr:$table->$row"] = function(mixed &$value) use ($spec_function, $conn, $table, $row) {
+      unset($spec_function["uniquestr:$table->$row"]);
+
       $stmt = $conn->prepare("SELECT * FROM $table WHERE $row = ?");
       $stmt->bind_param('s', $value);
       
@@ -47,7 +49,6 @@ abstract class SPEC {
         $res->status = true;
       }
 
-      unset($spec_function["uniquestr:$table->$row"]);
       return $res;
     };
     
@@ -153,7 +154,6 @@ function check(array $source, array $spec): CheckResponse {
     foreach ($reqs as $req) {
       if ($req == SPEC::Required) continue;
       if (!array_key_exists($req, $spec_function)) {
-        print_r($spec_function);
         throw new \ValueError($req);
       }
 

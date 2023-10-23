@@ -5,21 +5,20 @@ use \Utils\Sanitize;
 require_once 'lib/sanitizer.php';
 require_once 'lib/database.php';
 require_once 'lib/models/users.php';
+require_once 'lib/response.php';
 
 class Users {
-  public static function handle(string $method, array $payload): mixed {
+  public static function handle(string $method, array $payload): ?\Utils\HTTPResponse {
     switch ($method) {
       case 'POST': {
         return self::create($payload);
       }
-
-      default: {
-        die();
-      }
     }
+
+    return null;
   }
 
-  public static function create(array $payload): void {
+  public static function create(array $payload): \Utils\HTTPResponse {
     $conn = \Database\connect();
 
     $res = Sanitize\check($payload['post'], [
@@ -30,8 +29,7 @@ class Users {
     ]);
 
     if (!$res->status) {
-      // TODO: standardize errors and do this better
-      die(json_encode($res->error));
+      return \Utils\HTTPResponse::JSON(\Utils\HTTPStatus::BadRequest, $res->error);
     }
     
     \Models\User::create($conn,
@@ -40,5 +38,7 @@ class Users {
       $payload['post']['email'],
       $payload['post']['password']
     );
+
+    return new \Utils\HTTPResponse(\Utils\HTTPStatus::Created);
   }
 }
