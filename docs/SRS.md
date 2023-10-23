@@ -26,39 +26,39 @@ Lo scopo di questa applicazione è quello di fornire agli utenti uno strumento p
 ## Requisiti funzionali
 
 ### Account utenti
-Gli utenti con un account potranno svolgere operazioni sul sito in base ai loro **ruoli**. I ruoli sono assegnabili dagli amministratori, e possono ad esempio concedere il permesso di pubblicare avvisi, modificare orari, ma anche limitare l'iscrizione ad alcuni eventi.
+Gli utenti con un account potranno effettuare operazioni sul sito in base ai loro **ruoli**. I ruoli sono assegnabili dagli amministratori, e possono ad esempio concedere il permesso di pubblicare avvisi, modificare orari, ma potrebbero anche limitare l'iscrizione ad alcuni eventi.
 
 ### Obiettivi
 L'applicazione si porrà i seguenti obiettivi:
 
-1. **Visualizzazione informazioni**: L'applicazione renderà facile agli utenti visualizzare informazioni riguardanti gli or.s.i., tra cui:
+1. **Visualizzazione informazioni**: L'applicazione permetterà agli utenti di visualizzare informazioni riguardanti gli or.s.i., tra cui:
 
-    1. **Avvisi**: Gli avvisi sono dei post pubblicati dallo staff dell'applicazione, e saranno visibili a tutti gli utenti, anche non registrati. Avranno le seguenti specifiche:
+    1. **Avvisi**: Gli avvisi sono dei post pubblicati dallo staff dell'applicazione, e saranno visibili a tutti gli utenti, anche non registrati. Avranno le seguenti caratteristiche:
 
-        1. **Programmazione**: Gli avvisi saranno programmabili dallo staff.
-        2. **Newsletter**: Sarà presente una newsletter opzionale per gli utenti interessati.
-        3. **Allegati**: Sarà possibile caricare allegati, i tipi supportati saranno: immagini, video, documenti DOC e DOCX e file PDF.
-        4. **Ricerca**: Gli utenti saranno in grado di cercare facilmente tra gli avvisi, usando una barra di ricerca oppure dei *tag* preimpostati dallo staff.
-        5. **Supporto per Markdown**: Lo staff potrà creare avvisi utilizzando markdown.
-        6. **Avvisi fissati**: Lo staff potrà fissare un avviso per una determinata quantità di tempo (anche illimitato).
-        7. **Personalizzazione**: L'applicazione offrirà allo staff alcuni stili predefiniti di avvisi da poter pubblicare, per comunicare informazioni differenti (es. avviso generico o aggiornamento al sito).
+        1. **Programmazione**: La pubblicazione degli avvisi sarà programmabile dallo staff.
+        2. **Newsletter**: Sarà presente una newsletter opzionale per gli utenti interessati, che invierà un'email a tutti gli iscritti ogni volta che verrà pubblicato un nuovo avviso.
+        3. **Allegati**: Sarà possibile caricare allegati, i tipi supportati saranno: immagini, video e documenti DOC, DOCX e PDF.
+        4. **Ricerca**: Gli utenti saranno in grado di cercare facilmente tra gli avvisi, usando una barra di ricerca apposita oppure applicando filtri mediante dei *tag* (etichette degli avvisi) assegnati dallo staff.
+        5. **Supporto per Markdown**: Lo staff potrà creare avvisi utilizzando il linguaggio di formattazione Markdown.
+        6. **Avvisi fissati**: Lo staff potrà fissare un avviso per una determinata quantità di tempo (anche illimitata).
+        7. **Personalizzazione**: L'applicazione offrirà allo staff alcuni stili predefiniti di avvisi da poter pubblicare, per ad esempio comunicare informazioni differenti (es. avviso generico o aggiornamento al sito).
 
-    2. **Orari**: La sezione orari dell'applicazione conterrà informazioni riguardanti gli orari di apertura/chiusura degli oratori, oppure di altri servizi offerti da essi, tra cui messe. Lo staff sarà in grado di apportare modifiche direttamente dal sito.
-    3. **Moduli**: Lo staff avrà la possibilità di caricare documenti DOC, DOCX e PDF per gli utenti da visualizzare e da scaricare.
-    4. **"I nostri oratori"**: Gli utenti potranno facilmente vedere informazioni sui vari oratori di Scanzorosciate, tra cui contatti e indirizzi.
+    2. **Orari**: La sezione orari dell'applicazione conterrà informazioni riguardanti gli orari degli or.s.i. Potranno ad esempio esserci gli orari di apertura/chiusura degli oratori, oppure di altri servizi, come le messe. Lo staff sarà in grado di apportare modifiche direttamente dal sito.
+    3. **Moduli**: Lo staff avrà la possibilità di caricare documenti DOC, DOCX e PDF affinché gli utenti possano visualizzarli e scaricarli.
+    4. **Sezione "I nostri oratori"**: Gli utenti potranno visualizzare informazioni sui vari oratori di Scanzorosciate, tra cui contatti e indirizzi.
 
-2. **Prenotazione merchandise**: Gli utenti potranno facilmente prenotare *merchandise* venduto dagli or.s.i., il sito **non** si preoccuperà della vendita e della gestione del pagamento, ma servirà soltanto come storico delle vendite per facilitare il lavoro dello staff.
+2. **Prenotazione merchandise**: Gli utenti potranno facilmente prenotare *merchandise* venduto dagli or.s.i., il sito **non** si occuperà della vendita e della gestione del pagamento, ma solo della prenotazione, e avrà lo scopo di fungere come storico per facilitare il lavoro dello staff.
 
 3. **Eventi**: L'applicazione consentirà agli utenti di visualizzare e di iscriversi a eventi promossi dagli or.s.i., come il Cregrest e il catechismo. Per iscriversi sarà necessario far parte di una **famiglia**:
 
    1. **Famiglia**: Un utente normale del sito potrà iscriversi agli eventi dopo aver fornito altre informazioni relative a sé stesso (come codice fiscale e altre a scelta dello staff) per poter creare una famiglia. Una famiglia è composta da due tipi di entità:
 
-      1. **Genitore/Tutore legale**: Che potrà iscriversi a eventi e gestire le iscrizioni dei propri ragazzi minorenni.
-      2. **Adulto**: Che potrà iscriversi normalmente a qualsiasi evento
+      1. **Adulto**: Che potrà iscriversi a eventi e registrare i propri ragazzi minorenni per gestire le loro iscrizioni.
+      2. **Bambino**: Che sarà gestito dalle entità "Adulto" della propria famiglia. Al raggiungimento di una determinata età (come i 18 anni) potrà essere promosso a un account normale.
 
    2. **Gestione per amministratori**: Gli amministratori potranno facilmente visualizzare informazioni relative agli eventi creati, e avranno anche la possibilità di:
 
-      1. **Creare documenti DOCX personalizzati**: Lo staff potrà caricare un *template* di un file DOCX che verrà compilato automaticamente al momento dell'iscrizione dell'utente. Questo documento può servire sia come conferma d'iscrizione, ma anche come modulo da consegnare in segreteria per concludere l'iscrizione.
+      1. **Creare documenti DOCX personalizzati**: Lo staff potrà caricare un *template* di un file DOCX che verrà compilato automaticamente al momento dell'iscrizione di un utente a un evento. Questo documento potrà essere utilizzato sia come modulo di riepilogo dell'iscrizione, ma anche come modulo da consegnare in segreteria per poterla concludere.
       2. **Gestione degli utenti**: Lo staff potrà vedere rapidamente tutti gli utenti iscritti a un particolare evento in una tabella, in cui saranno disponibili filtri e opzioni per esportarla in formato CSV o XLSX.
 
 4. **Dashboard per amministratori**: Lo staff potrà facilmente effettuare operazioni al sito attraverso una dashboard:
@@ -68,16 +68,17 @@ L'applicazione si porrà i seguenti obiettivi:
     3. **Gestore dei ruoli**: Gli account con il ruolo di amministratore potranno assegnare ruoli agli altri utenti, permettendo o limitando certe azioni sull'applicazione.
     4. **Invio email**: Lo staff potrà mandare email personalizzate a un determinato gruppo di utenti.
 
-5. **Manuale utente**: L'applicazione avrà una sezione dedicata alla documentazione che potrà essere sfogliata dagli utenti se necessario. Gli amministratori avranno accesso a più pagine che parleranno di questioni relative alla gestione del sito.
+5. **Manuale utente**: L'applicazione avrà una sezione dedicata alla documentazione che potrà essere sfogliata dagli utenti se necessario. Gli amministratori avranno accesso a più pagine che tratteranno di questioni legate alla gestione del sito.
 
 ## Requisiti non funzionali
 ### Obiettivi
-L'applicazione si porrà come obiettivo fondamentale la facilità di utilizzo degli utenti. Dovra anche implementare le seguenti caratteristiche:
+L'applicazione si porrà i seguenti obiettivi:
 
-1. **Facilità d'accesso**: L'applicazione sarà sviluppata per tutti i browser più diffusi, con particolare attenzione per i più utilizzati, tra cui Google Chrome, Mozilla Firefox e le loro varianti per cellulari.
-2. **Sicurezza**: L'applicazione utilizzerà token per l'autenticazione degli utenti. Consentirà anche l'utilizzo dell'autenticazione a due fattori (2FA).
+1. **Facilità d'utilizzo**: L'interfaccia utente dell'applicazione verrà sviluppata per essere facile da usare per utenti di tutte le età e competenza informatica.
+1. **Design responsive per la compatibilità dei dispositivi**: L'applicazione sarà sviluppata per funzionare correttamente su tutti i browser più diffusi, con particolare attenzione per i più utilizzati, tra cui Google Chrome, Mozilla Firefox e le loro varianti per cellulari.
+2. **Sicurezza**: L'applicazione utilizzerà algoritmi di crittografia avanzati per il salvataggio delle password:<br> `(SHA256 lato client --> HMAC + pepper --> BCRYPT + salt)`<br>Verrà utilizzata un'autenticazione basata su token, e sarà disponibile anche l'autenticazione a due fattori (2FA) per gli utenti interessati.
 3. **Search Engine Optimization (SEO)**: L'applicazione s'integrerà con i motori di ricerca più utilizzati per rendere il sito più visibile e più rilevante nei risultati.
 4. **Documentazione tecnica**: L'applicazione sarà dotata di un'esaustiva documentazione tecnica per rendere facile la manutenzione da parte di eventuali manutentori futuri.
 
 ## Requisiti di dominio
-L'applicazione sarà sviluppata per funzionare su un ambiente GNU/Linux con un server Apache dotato di preprocessore PHP e di database MySQL o MariaDB.
+L'applicazione sarà sviluppata per funzionare su un ambiente GNU/Linux con un server Apache2 dotato di preprocessore PHP8 e di database MySQL o MariaDB.

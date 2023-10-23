@@ -22,7 +22,7 @@ Applicazione web che permette di visualizzare informazioni sugli oratori di Scan
 - MariaDB
 
 ## Installazione ambiente di sviluppo
-Attenzione! Queste istruzioni sono scritte per un ambiente GNU/Linux, è comunque possibile installare un ambiente di sviluppo anche su altri sistemi operativi replicando i passaggi, anche se non interamente uguali.
+Queste istruzioni sono scritte per ambienti GNU/Linux, è comunque possibile seguirle per l'installazione di un ambiente di sviluppo anche su altri sistemi operativi, anche se non ufficialmente supportati.
 ### Prerequisiti
 Assicurati di avere i seguenti pacchetti installati sul tuo computer:<br>
 `php8` `composer` `typescript` `sass` `mariadb`
@@ -32,19 +32,20 @@ Assicurati di avere i seguenti pacchetti installati sul tuo computer:<br>
 L'applicazione richiede che le seguenti estensioni di PHP siano abilitate:<br>
 `curl` `mysqli`
 
-Per verificare quelle installate e installate si possono eseguire questi comandi:
+Per verificare quelle installate e/o abilitate si possono eseguire i seguenti comandi:
 ```bash
-ls /usr/lib/php/modules | grep mysqli # Per verificare se `mysqli` è scaricata (non necessariamente abilitata).
+$ ls /usr/lib/php/modules | grep mysqli # Per verificare se `mysqli` è scaricata (non necessariamente abilitata).
                                       # /usr/lib/php/modules è la cartella di installazione di default
-php -m | grep mysqli # Per verificare se `mysqli` è abilitata
+$ php -m | grep mysqli # Per verificare se `mysqli` è abilitata
 ```
 
-In caso non fossero abilitate:<br>
-Per installarle è necessario prima scaricarle (sui *package manager* di GNU/Linux solitamente si chiamano `php-<estensione>`):
+In caso non fossero installate:<br>
+È necessario scaricarle dal proprio *package manager* (solitamente sono chiamate `php-<estensione>`):
 ```bash
-apt install php-mysqli # Debian
-yum install php-mysqli # Red Hat
-dnf install php-mysqli # Fedora
+$ sudo apt install php-mysqli # Debian
+$ sudo yum install php-mysqli # Red Hat
+$ sudo dnf install php-mysqli # Fedora
+... # eccetera
 ```
 Poi è necessario abilitarle. Per farlo si deve localizzare il file `php.ini` caricato con il comando `php --ini`, poi bisogna decommentare le estensioni desiderate:
 ```bash
@@ -52,16 +53,17 @@ Poi è necessario abilitarle. Per farlo si deve localizzare il file `php.ini` ca
 
 extension=mysqli
 ```
-Se il server web è acceso riavvialo e dovrebbero funzionare.
+Se il server web è acceso è necessario un riavvio per farle funzionare.
 #### Dipendenze
 Per installare le dipendenze di PHP è necessario eseguire:
 ```bash
-cd src
-composer update
+$ cd src
+$ composer update
 ```
 
 ### Configurazione variabili d'ambiente
-La repository del progetto include un file `.env.example`, che contiene la struttura del file `.env` che l'applicazione usa. Questa è una lista delle variabili e il loro utilizzo:<br>
+La repository del progetto include un file `.env.example`, che contiene la struttura del file `.env` che l'applicazione richiede. Il file `.env` contiene variabili che variano a seconda dell'ambiente in cui l'applicazione viene eseguita, e solitamente contiene dati sensibili da non condividere.<br>
+Questa è una lista delle variabili e il loro utilizzo:<br>
 #### Connessione al database
 - `DB_HOSTNAME`: Indirizzo del server del database
 - `DB_USERNAME`: Username dell'account con cui effettuare l'accesso al database

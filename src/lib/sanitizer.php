@@ -29,7 +29,7 @@ abstract class SPEC {
   public static function UniqueStr(\mysqli $conn, string $table, string $row): string {
     global $spec_function;
 
-    $spec_function["uniquestr:$table->$row"] = function(mixed &$value) use ($spec_function, $conn, $table, $row) {
+    $spec_function["uniquestr:$table->$row"] = function(mixed &$value) use ($spec_function, $conn, $table, $row): Response {
       unset($spec_function["uniquestr:$table->$row"]);
 
       $stmt = $conn->prepare("SELECT * FROM $table WHERE $row = ?");
@@ -83,9 +83,7 @@ $spec_function[SPEC::Integer] = function(mixed &$int): Response {
   return $res;
 };
 
-$spec_function[SPEC::Email] = function(mixed &$str): Response {
-  global $spec_function;
-
+$spec_function[SPEC::Email] = function(mixed &$str) use ($spec_function): Response {
   $res = $spec_function[SPEC::String]($str);
   if (!$res->status) return $res;
 
@@ -131,11 +129,6 @@ class CheckResponse {
  *  <name> => SPEC[],
  *   ...
  * ]
- *
- * @param array $source
- * @param array $spec
- * @return Response
- * @throws ValueError
  */
 function check(array $source, array $spec): CheckResponse {
   global $spec_function;
