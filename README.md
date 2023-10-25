@@ -16,6 +16,7 @@ Applicazione web che permette di visualizzare informazioni sugli oratori di Scan
 - [Altre risorse](#altre-risorse)
 
 ## Tecnologie utilizzate
+L'applicazione è scritta utilizzando le seguenti tecnologie:
 - PHP 8
 - TypeScript
 - Sass
@@ -35,7 +36,7 @@ L'applicazione richiede che le seguenti estensioni di PHP siano abilitate:<br>
 Per verificare quelle installate e/o abilitate si possono eseguire i seguenti comandi:
 ```bash
 $ ls /usr/lib/php/modules | grep mysqli # Per verificare se `mysqli` è scaricata (non necessariamente abilitata).
-                                      # /usr/lib/php/modules è la cartella di installazione di default
+                                        # /usr/lib/php/modules è la cartella di installazione di default
 $ php -m | grep mysqli # Per verificare se `mysqli` è abilitata
 ```
 
@@ -47,13 +48,13 @@ $ sudo yum install php-mysqli # Red Hat
 $ sudo dnf install php-mysqli # Fedora
 ... # eccetera
 ```
-Poi è necessario abilitarle. Per farlo si deve localizzare il file `php.ini` caricato con il comando `php --ini`, poi bisogna decommentare le estensioni desiderate:
+Poi è necessario abilitarle. Per farlo si deve aprire il file `php.ini` caricato (per localizzarlo si può usare il comando `php --ini`), poi bisogna decommentare le estensioni desiderate:
 ```bash
 # /etc/php/php.ini
 
 extension=mysqli
 ```
-Se il server web è acceso è necessario un riavvio per farle funzionare.
+Se il server web è acceso potrebbe essere necessario un riavvio per farle funzionare.
 #### Dipendenze
 Per installare le dipendenze di PHP è necessario eseguire:
 ```bash
