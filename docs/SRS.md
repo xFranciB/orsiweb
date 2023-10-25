@@ -99,9 +99,19 @@ L'applicazione si porrà i seguenti obiettivi:
 
 1. **Facilità d'utilizzo**: L'interfaccia utente dell'applicazione verrà sviluppata per essere facile da usare per utenti di tutte le età e competenza informatica.
 1. **Design responsive per la compatibilità dei dispositivi**: L'applicazione sarà sviluppata per funzionare correttamente su tutti i browser più diffusi, con particolare attenzione per i più utilizzati, tra cui Google Chrome, Mozilla Firefox e le loro varianti per cellulari.
-2. **Sicurezza**: L'applicazione utilizzerà algoritmi di crittografia avanzati per il salvataggio delle password:<br> `(SHA256 lato client --> HMAC + pepper --> BCRYPT + salt)`<br>Verrà utilizzata un'autenticazione basata su token, e sarà disponibile anche l'autenticazione a due fattori (2FA) per gli utenti interessati.
-3. **Search Engine Optimization (SEO)**: L'applicazione s'integrerà con i motori di ricerca più utilizzati per rendere il sito più visibile e più rilevante nei risultati.
-4. **Documentazione tecnica**: L'applicazione sarà dotata di un'esaustiva documentazione tecnica per rendere facile la manutenzione da parte di eventuali manutentori futuri.
+2. **Sicurezza**: L'applicazione utilizzerà algoritmi di crittografia avanzati per il salvataggio delle password:
+    1. **SHA256 lato client**: Maggiore sicurezza contro attacchi sniffing
+    2. **BCRYPT (con costo alto[^1]) + salt[^2]**: Maggiore sicurezza contro bruteforce (BCRYPT è, per design, piuttosto lento)
+    3. **HMAC + pepper[^3]**: Maggiore sicurezza in caso di accesso non autorizzato SOLO al database contenente le password
+
+Verrà utilizzata un'autenticazione basata su token, e sarà disponibile anche l'autenticazione a due fattori (2FA) per gli utenti interessati.
+
+5. **Search Engine Optimization (SEO)**: L'applicazione s'integrerà con i motori di ricerca più utilizzati per rendere il sito più visibile e più rilevante nei risultati.
+6. **Documentazione tecnica**: L'applicazione sarà dotata di un'esaustiva documentazione tecnica per rendere facile la manutenzione da parte di eventuali manutentori futuri.
 
 ## Requisiti di dominio
 L'applicazione sarà sviluppata per funzionare su un ambiente GNU/Linux con un server Apache2 dotato di preprocessore PHP8 e di database MySQL o MariaDB.
+
+[^1]: Con "costo" si intende la complessità computazionale necessaria per calcolare l'hash della password e serve per avere maggiore protezione. Il costo minimo raccomandato è di 10.
+[^2]: Il salt è una stringa generata casualmente per ogni password diversa, che viene aggiunta all'hash finale della password.
+[^3]: Il pepper è una stringa generata casualmente una volta e accessibile globalmente all'interno dell'applicazione.
