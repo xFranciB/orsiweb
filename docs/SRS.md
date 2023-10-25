@@ -12,6 +12,7 @@ Rimani aggiornato sugli Oratori di Scanzorosciate (or.s.i.), ora anche online. V
 - [Requisiti funzionali](#requisiti-funzionali)
   - [Account utenti](#account-utenti)
   - [Obiettivi](#obiettivi)
+  - [Diagrammi dei casi d'uso](#diagrammi-dei-casi-duso)
 - [Requisiti non funzionali](#requisiti-non-funzionali)
   - [Obiettivi](#obiettivi-1)
 - [Requisiti di dominio](#requisiti-di-dominio)
@@ -69,6 +70,28 @@ L'applicazione si porrà i seguenti obiettivi:
     4. **Invio email**: Lo staff potrà mandare email personalizzate a un determinato gruppo di utenti.
 
 5. **Manuale utente**: L'applicazione avrà una sezione dedicata alla documentazione che potrà essere sfogliata dagli utenti se necessario. Gli amministratori avranno accesso a più pagine che tratteranno di questioni legate alla gestione del sito.
+
+### Diagrammi dei casi d'uso
+Di seguito sono riportati diversi diagrammi dei casi d'uso per rappresentare meglio i requisiti funzionali descritti qui sopra.<br>
+(I diagrammi potrebbero essere difficili da vedere utilizzando un tema scuro, in questo caso è consigliato visualizzarli separatamente)
+
+#### Avvisi
+![diagramma-avvisi](https://yuml.me/diagram/scruffy/usecase/[Amministratore]%5E[Utente],[Utente]-(Lettura%20avvisi),(Lettura%20avvisi)%3C(Ricerca%20avvisi),(Lettura%20avvisi)%3C(Newsletter),(Newsletter)%3E(Invio%20email),[Servizi%20email]-(Invio%20email),[Amministratore]-(Creazione%20avvisi),(Creazione%20avvisi)%3C(Stili%20predefiniti),(Creazione%20avvisi)%3C(Fissazione%20per%20una%20determinata%20quantit%C3%A0%20di%20tempo),(Creazione%20avvisi)%3C(Caricamento%20allegati%20DOC%20DOCX%20e%20PDF),(Caricamento%20allegati%20DOC%20DOCX%20e%20PDF)%3E(Motore%20di%20conversione%20da%20DOC%20a%20DOCX%20e%20da%20DOCX%20a%20PDF%20con%20LibreOffice),(Creazione%20avvisi)%3C(Programmazione))
+
+#### Orari
+![diagramma-orari](https://yuml.me/diagram/scruffy/usecase/[Amministratore]%5E[Utente],[Utente]-(Lettura%20orari),[Amministratore]-(Modifica%20orari))
+
+#### Moduli
+![diagramma-moduli](https://yuml.me/diagram/scruffy/usecase/[Amministratore]%5E[Utente],[Utente]-(Visualizzazione%20e%20download%20moduli),[Amministratore]-(Creazione%20moduli),(Visualizzazione%20e%20download%20moduli)%3C(Visualizzatore%20immagini%20video%20e%20documenti%20DOC%20DOCX%20e%20PDF),(Creazione%20moduli)%3E(Caricamento%20allegati%20DOC%20DOCX%20e%20PDF),(Caricamento%20allegati%20DOC%20DOCX%20e%20PDF)%3E(Motore%20di%20conversione%20da%20DOC%20a%20DOCX%20e%20da%20DOCX%20a%20PDF%20con%20LibreOffice))
+
+#### Merchandise
+![diagramma-merchandise](https://yuml.me/diagram/scruffy/usecase/[Amministratore]%5E[Utente],[Utente]-(Prenotazione%20merchandise),[Amministratore]-(Gestione%20merchandise),(Prenotazione%20merchandise)%3E(Invio%20email),[Servizi%20email]-(Invio%20email),(Gestione%20merchandise)%3E(Aggiunta%20nuovo%20merchandise),(Gestione%20merchandise)%3E(Gestione%20prenotazioni))
+
+#### Eventi
+![diagramma-eventi](https://yuml.me/diagram/scruffy/usecase/[Utente%20Adulto]-(Iscrizione%20a%20eventi),[Utente%20Adulto]-(Gestione%20eventi%20dei%20propri%20bambini),(Gestione%20eventi%20dei%20propri%20bambini)%3E(Iscrizione%20a%20eventi),[Amministratore]-(Creazione%20eventi),(Creazione%20eventi)%3C(Creazione%20documenti%20DOCX%20da%20template),(Iscrizione%20a%20eventi)%3C(Creazione%20documenti%20DOCX%20da%20template),[Amministratore]-(Gestione%20utenti%20e%20iscrizioni),(Gestione%20utenti%20e%20iscrizioni)%3C(Invio%20email),(Iscrizione%20a%20eventi)%3E(Invio%20email),[Servizi%20email]-(Invio%20email))
+
+#### Gestione amministratori
+![diagramma-admin](https://yuml.me/diagram/scruffy/usecase/[Amministratore]-(Impostazioni%20globali),(Impostazioni%20globali)%3E(Limitazione%20iscrizioni),(Impostazioni%20globali)%3E(Limitazione%20accesso%20per%20manutenzione),[Amministratore]-(Gestione%20utenti),(Gestione%20utenti)%3E(Verifica%20iscrizioni%20alla%20newsletter),(Gestione%20utenti)%3E(Invio%20email%20a%20determinati%20utenti),(Gestore%20dei%20ruoli)%3C(Invio%20email%20a%20determinati%20utenti),(Gestione%20utenti)%3E(Gestore%20dei%20ruoli),(Gestore%20dei%20ruoli)-(note:%20Gestione%20permessi%20degli%20utenti%7Bbg:beige%7D),[Servizi%20email]-(Invio%20email%20a%20determinati%20utenti))
 
 ## Requisiti non funzionali
 ### Obiettivi
