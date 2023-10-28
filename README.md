@@ -72,6 +72,7 @@ Questa è una lista delle variabili e il loro utilizzo:<br>
 - `DB_DATABASE`: Nome del database da utilizzare
 
 #### Password
+- `HASH_COST`: "Costo" dell'algoritmo di hashing delle password, più alto è più sicuro è. Si consiglia come minimo 10, e ogni +1 raddoppia il tempo di computazione necessario. (indicativamente, poiché il tempo varia a seconda dell'hardware, un costo di 10 ci mette circa 50ms, un costo di 15 circa 1.5s l'algoritmo viene eseguito a ogni registrazione e ogni login)
 - `PASS_HMAC`: "Pepper" da usare durante l'hashing delle password 
     - ATTENZIONE: Senza il "PASS\_HMAC" usato per generare le password, queste sono IRRECUPERABILI.
 

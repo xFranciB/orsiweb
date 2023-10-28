@@ -20,8 +20,8 @@ class User extends BaseModel {
   }
 
   public static function create(\mysqli $conn, string $name, string $surname, string $email, string $password): void {
+    $password = password_hash($password, PASSWORD_DEFAULT, ['cost' => $_ENV['HASH_COST']]);
     $password = hash_hmac('sha256', $password, $_ENV['PASS_HMAC']);
-    $password = password_hash($password, PASSWORD_DEFAULT);
 
     $stmt = $conn->prepare('INSERT INTO users (name, surname, email, password) VALUES (?, ?, ?, ?)');
     $stmt->bind_param('ssss', $name, $surname, $email, $password);
