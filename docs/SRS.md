@@ -16,6 +16,7 @@ Rimani aggiornato sugli Oratori di Scanzorosciate (or.s.i.), ora anche online. V
 - [Requisiti non funzionali](#requisiti-non-funzionali)
   - [Obiettivi](#obiettivi-1)
 - [Requisiti di dominio](#requisiti-di-dominio)
+- [Organizzazione del lavoro](#organizzazione-del-lavoro)
 
 ## Introduzione
 ### Scopo
@@ -111,6 +112,24 @@ Verrà utilizzata un'autenticazione basata su token, e sarà disponibile anche l
 
 ## Requisiti di dominio
 L'applicazione sarà sviluppata per funzionare su un ambiente GNU/Linux con un server Apache2 dotato di preprocessore PHP8 e di database MySQL o MariaDB.
+
+## Organizzazione del lavoro
+Il carico del lavoro del progetto è diviso in questo modo:
+1. **Sito or.s.i.**<br>
+    1.1. **Sviluppo frontend** 60%<br>
+    &emsp; 1.1.1. **Progettazione design** 10%<br>
+    &emsp; 1.1.2. **Progettazione API per comunicazione con backend** 10%<br>
+    &emsp; 1.1.3. **Progettazione scheletro (funzioni base, modal, gestione errori ecc)** 20%<br>
+    &emsp; 1.1.3. **Sezione informazionale (avvisi, orari, contatti ecc)** 30%<br>
+    &emsp; 1.1.4. **Sezione eventi** 30%<br>
+  1.2. **Sviluppo backend** 25%<br>
+    &emsp; 1.2.1. **Progettazione scheletro (routing, collegamento al database ecc)** 50%<br>
+    &emsp; 1.2.2. **Creazione degli endpoint dell'API** 20%<br>
+    &emsp; 1.2.3. **Implementazione del sistema di conversione allegati** 30%<br>
+  1.3. **Collaudo** 10%<br>
+    &emsp; 1.3.1. **Collaudo API backend** 30%<br>
+    &emsp; 1.3.2. **Collaudo frontend e dell'esperienza utente** 70%<br>
+  1.4. **Marketing su social network** 5%<br>
 
 [^1]: Con "costo" si intende la complessità computazionale necessaria per calcolare l'hash della password e serve per avere maggiore protezione. Il costo minimo raccomandato è di 10.
 [^2]: Il salt è una stringa generata casualmente per ogni password diversa, che viene aggiunta all'hash finale della password.
