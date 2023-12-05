@@ -13,6 +13,7 @@ Rimani aggiornato sugli Oratori di Scanzorosciate (or.s.i.), ora anche online. V
   - [Account utenti](#account-utenti)
   - [Obiettivi](#obiettivi)
   - [Diagrammi dei casi d'uso](#diagrammi-dei-casi-duso)
+  - [User stories](#user-stories)
 - [Requisiti non funzionali](#requisiti-non-funzionali)
   - [Obiettivi](#obiettivi-1)
 - [Requisiti di dominio](#requisiti-di-dominio)
@@ -93,6 +94,13 @@ Di seguito sono riportati diversi diagrammi dei casi d'uso per rappresentare meg
 
 #### Gestione amministratori
 ![diagramma-admin](https://yuml.me/diagram/scruffy/usecase/[Amministratore]-(Impostazioni%20globali),(Impostazioni%20globali)%3E(Limitazione%20iscrizioni),(Impostazioni%20globali)%3E(Limitazione%20accesso%20per%20manutenzione),[Amministratore]-(Gestione%20utenti),(Gestione%20utenti)%3E(Verifica%20iscrizioni%20alla%20newsletter),(Gestione%20utenti)%3E(Invio%20email%20a%20determinati%20utenti),(Gestore%20dei%20ruoli)%3C(Invio%20email%20a%20determinati%20utenti),(Gestione%20utenti)%3E(Gestore%20dei%20ruoli),(Gestore%20dei%20ruoli)-(note:%20Gestione%20permessi%20degli%20utenti%7Bbg:beige%7D),[Servizi%20email]-(Invio%20email%20a%20determinati%20utenti))
+
+### User stories
+Di seguito sono riportate diverse user stories prese dai requisiti funzionali indicati sopra.<br>
+Presentiamo abbastanza user stories per due sprint di un'ipotetica azienda che utilizza il modello Agile Scrum. Ogni sprint è di tre settimane e supponiamo un singolo dipendente per la stima delle ore.
+- Come utente, voglio essere in grado di leggere gli avvisi in modo da rimanere aggiornato con gli oratori
+- Come amministratore, voglio essere in grado di caricare avvisi in modo da poterli mostrare agli utenti dell'applicazione
+- Come amministratore, voglio essere in grado di caricare allegati e personalizzare lo stile degli avvisi in modo da poter comunicare più effettivamente con gli utenti.
 
 ## Requisiti non funzionali
 ### Obiettivi
