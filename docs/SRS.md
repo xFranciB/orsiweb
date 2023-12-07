@@ -96,11 +96,39 @@ Di seguito sono riportati diversi diagrammi dei casi d'uso per rappresentare meg
 ![diagramma-admin](https://yuml.me/diagram/scruffy/usecase/[Amministratore]-(Impostazioni%20globali),(Impostazioni%20globali)%3E(Limitazione%20iscrizioni),(Impostazioni%20globali)%3E(Limitazione%20accesso%20per%20manutenzione),[Amministratore]-(Gestione%20utenti),(Gestione%20utenti)%3E(Verifica%20iscrizioni%20alla%20newsletter),(Gestione%20utenti)%3E(Invio%20email%20a%20determinati%20utenti),(Gestore%20dei%20ruoli)%3C(Invio%20email%20a%20determinati%20utenti),(Gestione%20utenti)%3E(Gestore%20dei%20ruoli),(Gestore%20dei%20ruoli)-(note:%20Gestione%20permessi%20degli%20utenti%7Bbg:beige%7D),[Servizi%20email]-(Invio%20email%20a%20determinati%20utenti))
 
 ### User stories
+#### Avvisi
 Di seguito sono riportate diverse user stories prese dai requisiti funzionali indicati sopra.<br>
-Presentiamo abbastanza user stories per due sprint di un'ipotetica azienda che utilizza il modello Agile Scrum. Ogni sprint è di tre settimane e supponiamo un singolo dipendente per la stima delle ore.
-- Come utente, voglio essere in grado di leggere gli avvisi in modo da rimanere aggiornato con gli oratori
-- Come amministratore, voglio essere in grado di caricare avvisi in modo da poterli mostrare agli utenti dell'applicazione
-- Come amministratore, voglio essere in grado di caricare allegati e personalizzare lo stile degli avvisi in modo da poter comunicare più effettivamente con gli utenti.
+Assumiamo un singolo sviluppatore per la stima del tempo di lavoro necessario per completare ogni singola story. Il tempo stimato è indicato in ore e, per buona prassi, è indicato con un numero appartenente alla sequenza di Fibonacci che rappresenta una stima in eccesso.
+- Come utente non registrato, voglio essere in grado di leggere gli avvisi in modo da rimanere aggiornato con gli or.s.i. (3h)
+- Come utente non registrato, voglio essere in grado di visualizzare gli allegati degli avvisi. (13h)
+- Come utente non registrato, voglio essere in grado di ricercare tra gli avvisi per testo o di applicare filtri per poter trovare rapidamente quello che sto cercando. (8h)
+- Come utente registrato, voglio essere in grado di iscrivermi alla newsletter in modo da ricevere un'email ogni volta che viene pubblicato un nuovo avviso. (3h)
+- Come amministratore, voglio essere in grado di caricare avvisi in modo da poterli mostrare agli utenti dell'applicazione. (5h)
+- Come amministratore, voglio essere in grado di caricare allegati, personalizzare lo stile, fissare, e utilizzare Markdown negli avvisi in modo da poter comunicare più efficaciamente con gli utenti. (21h)
+- Come amministratore, voglio essere in grado di programmare la pubblicazione degli avvisi in modo da poterli pianificare in anticipo. (5h)
+#### Orari
+- Come amministratore, voglio essere in grado di applicare facilmente modifiche agli orari degli or.s.i in modo da poter tenere aggiornati gli utenti sugli oratori. (13h)
+- Come utente non registrato, voglio essere in grado di consultare facilmente gli orari degli or.s.i in modo da rimanere aggiornato sugli oratori. (3h)
+#### Moduli
+- Come amministratore, voglio essere in grado di caricare facilmente documenti (DOC, DOCX e PDF) in modo da consentire agli utenti di visualizzarli e di scaricarli. (13h)
+- Come utente non registrato, voglio essere in grado di visualizzare e di scaricare documenti (DOC, DOCX e PDF) in modo da poterli consultare facilmente. (13h)
+#### Merchandise
+- Come amministratore, voglio essere in grado di caricare nuovo merchandise, e di aggiornare la disponibilità di quello già esistente in modo da accettare prenotazioni dagli utenti. (13h)
+- Come utente registrato, voglio essere in grado di prenotare merchandise dal sito degli or.s.i. in modo da poterlo acquistare in seguito dalla segreteria degli oratori. (13h)
+- Come amministratore, voglio essere in grado di visualizzare la lista delle prenotazioni del merchandise in modo da tenerne traccia facilmente. (8h)
+#### Eventi
+- Come amministratore, voglio essere in grado di aggiungere eventi promossi dagli or.s.i. in modo da consentire agli utenti di iscriversi a essi. (8h)
+- Come utente, voglio essere in grado di creare una famiglia in modo da poter facilmente gestire le iscrizioni del mio profilo ed eventualmente quello dei miei figli minorenni. (13h)
+- Come utente, voglio essere in grado di iscrivere facilmente me o un mio eventuale figlio minorenne a un evento promosso dagli orsi in modo da poterci partecipare. (5h)
+- Come amministratore, voglio essere in grado di esportare le informazioni relative alle iscrizioni degli utenti a un evento in formato CSV o XLSX in modo da renderne più facile la consultazione e la gestione. (13h)
+#### Altro/Gestione sito
+- Come utente non registrato, voglio essere in grado di creare un profilo in modo da accedere a funzionalità riservate agli utenti iscritti. (5h)
+- Come amministratore, voglio essere in grado di consultare informazioni sugli utenti, come numero di persone registrate al sito e alla newsletter, in modo da facilitare la gestione degli oratori. (5h)
+- Come amministratore, voglio essere in grado di inviare email attraverso il sito or.s.i. a utenti predeterminati, che possono essere scelti da me in base alle loro caratteristiche (nome, cognome, nascita, ruolo ecc.) o anche arbitrariamente, in modo da poter comunicare efficacemente con loro. (13h)
+- Come amministratore, voglio essere in grado di assegnare ruoli ai singoli utenti in modo da poter limitare o consentire il loro accesso a certe parti dell'applicazione. (13h)
+- Come amministratore, voglio essere in grado di apportare modifiche globali all'applicazione, come limitare gli accessi per manutenzione, in modo da poter gestire più facilmente il sito. (5h)
+- Come utente non registrato, voglio avere accesso alla documentazione dell'applicazione, in modo da poterla consultare quando necessito di ulteriori informazioni relative all'uso di essa. (21h)
+- Come amministratore, voglio avere accesso a una documentazione più avanzata che tratti di questioni relative alla gestione del sito in modo da poterla consultare quando necessato di ulteriori informazioni relative all'uso di essa. (13h)
 
 ## Requisiti non funzionali
 ### Obiettivi
